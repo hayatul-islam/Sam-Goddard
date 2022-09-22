@@ -2,7 +2,12 @@
 module.exports = {
   content: ["./src/**/*.{html,js}"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        neue: ["Bebas Neue", "cursive"],
+        neuton: ["Neuton", "serif"],
+      },
+    },
   },
   plugins: [],
 };
