@@ -3,7 +3,9 @@ import TheLayout from "./pages/TheLayout";
 function App() {
   return (
     <>
-      <TheLayout />
+      <div className="bg-[#262525]">
+        <TheLayout />
+      </div>
     </>
   );
 }

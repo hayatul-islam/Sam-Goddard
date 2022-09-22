@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 function Header() {
   return (
     <>
-      <div className="px-[32px] bg-[#262525]">
+      <div className="px-[32px]">
         <div className="grid grid-cols-2 text-[28px] py-[16px] border-b-2 border-[#bebebe] text-[#bebebe] ">
           <div className="flex justify-between">
             <div className="flex space-x-6">
