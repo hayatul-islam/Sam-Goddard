@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Work from "./Work";
 const works = [
   {
@@ -22,11 +22,21 @@ const works = [
 ];
 
 function Works() {
+  const [isHover, setIsHover] = useState(false);
+
   return (
     <>
       <div className="py-3">
         {works?.map((work, i) => (
-          <Work key={work?.id} index={i} work={work} />
+          <div>
+            <Work
+              isHover={isHover}
+              setIsHover={setIsHover}
+              key={work?.id}
+              index={i}
+              work={work}
+            />
+          </div>
         ))}
       </div>
     </>
