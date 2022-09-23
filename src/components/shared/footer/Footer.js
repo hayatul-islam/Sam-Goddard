@@ -46,7 +46,7 @@ function Footer() {
           </nav>
           <div>
             <motion.button
-              onClick={handleTop}
+              onTap={handleTop}
               className="text-[28px] font-neuton hover:line-through decoration-1"
             >
               Back to Top

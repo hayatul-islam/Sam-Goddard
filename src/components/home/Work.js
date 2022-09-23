@@ -1,9 +1,18 @@
 import { motion } from "framer-motion";
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function Work({ work, index, setIsHover, isHover }) {
   const { name, img, year } = work;
   const [isShow, setIsShow] = useState(false);
+  const navigate = useNavigate();
+
+  const route = name.split(" ");
+  const routeQurey = route?.join("-");
+
+  const handleNavigate = () => {
+    navigate(`/${routeQurey}`);
+  };
 
   const handleMouseEnter = () => {
     setIsHover(true);
@@ -17,6 +26,7 @@ function Work({ work, index, setIsHover, isHover }) {
   return (
     <>
       <motion.div
+        onClick={handleNavigate}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5, type: "spring" }}
