@@ -17,7 +17,12 @@ function Work({ work, index, setIsHover, isHover }) {
   return (
     <>
       <div className="relative group">
-        <motion.div whileHover={{ paddingLeft: "20px", opacity: 1 }}>
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5, type: "spring" }}
+          whileHover={{ paddingLeft: "20px" }}
+        >
           <div
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
@@ -38,9 +43,15 @@ function Work({ work, index, setIsHover, isHover }) {
         </motion.div>
         <hr className="opacity-20" />
         {isShow && (
-          <div className="absolute top-[-100px] right-[5%] w-[500px] h-[350px] opacity-20">
-            <img className="w-full h-full" src={img} alt="" />
-          </div>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+          >
+            <div className="absolute top-[-100px] right-[5%] w-[500px] h-[350px] opacity-20">
+              <img className="w-full h-full" src={img} alt="" />
+            </div>
+          </motion.div>
         )}
       </div>
     </>
