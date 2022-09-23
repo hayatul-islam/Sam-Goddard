@@ -1,35 +1,56 @@
+import { motion } from "framer-motion";
 import React from "react";
-import { NavLink } from "react-router-dom";
 
 function Footer() {
   const handleTop = () => {
     window.scrollTo(0, 0);
+  };
+  const handleEmail = () => {
+    window.open("mailto:hayatulislam28@gmail.com?subject=&body=");
   };
   return (
     <>
       <div className=" text-[#bebebe] opacity-70 px-[32px] ">
         <div className=" border-t border-[#bebebe] flex justify-between py-4">
           <nav className="text-[28px] font-neuton flex space-x-6">
-            <NavLink className=" hover:line-through decoration-1" to="">
+            <a
+              className=" hover:line-through decoration-1"
+              href="https://twitter.com/samuelgoddard?lang=en"
+              target="_blank"
+              rel="noreferrer"
+            >
               Twitter
-            </NavLink>
-            <NavLink className=" hover:line-through decoration-1" to="">
+            </a>
+            <a
+              href="https://open.spotify.com/user/sam_goddardn"
+              target="_blank"
+              rel="noreferrer"
+              className=" hover:line-through decoration-1"
+            >
               Spotify
-            </NavLink>
-            <NavLink className=" hover:line-through decoration-1" to="">
+            </a>
+            <a
+              href="https://github.com/samuelgoddard"
+              target="_blank"
+              rel="noreferrer"
+              className=" hover:line-through decoration-1"
+            >
               Github
-            </NavLink>
-            <NavLink className=" hover:line-through decoration-1" to="">
+            </a>
+            <button
+              onClick={handleEmail}
+              className=" hover:line-through decoration-1"
+            >
               Email
-            </NavLink>
+            </button>
           </nav>
           <div>
-            <button
+            <motion.button
               onClick={handleTop}
-              className="text-[24px] font-neuton hover:line-through decoration-1"
+              className="text-[28px] font-neuton hover:line-through decoration-1"
             >
               Back to Top
-            </button>
+            </motion.button>
           </div>
         </div>
       </div>
