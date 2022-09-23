@@ -42,7 +42,7 @@ function Work({ work, index, setIsHover, isHover }) {
           <div className={`flex justify-between  text-[#bebebe]   `}>
             <div className="flex items-start leading-none py-3 space-x-4">
               <span className="text-[46px] font-light font-neuton ">
-                ({index < 10 ? `0${index + 1}` : `${index}`})
+                ({index < 9 ? `0${Number(index) + 1}` : `${Number(index) + 1}`})
               </span>
               <span className="text-[150px] font-neue">{name}</span>
             </div>
