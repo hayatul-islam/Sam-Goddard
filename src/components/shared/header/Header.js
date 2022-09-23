@@ -12,9 +12,7 @@ function Header() {
               <h2>’89 —</h2>
             </div>
             <div className="w-[300px] overflow-hidden">
-              <marquee direction="left">
-                Creative Developer — Available May ’22 —
-              </marquee>
+              <marquee>Creative Developer — Available May ’22 —</marquee>
             </div>
           </div>
           <div>
