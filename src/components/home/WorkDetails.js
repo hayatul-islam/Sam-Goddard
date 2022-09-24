@@ -223,12 +223,12 @@ function WorkDetails() {
         </div>
 
         {/* ABOUT THE PROJECT */}
-        <div className="md:flex md:justify-between py-12">
+        <div className="md:flex md:justify-between xl:justify-start  py-12">
           <div className="xl:w-[490px] lg:w-[400px] md:w-[200px]">
             <p className="text-[20px] text-[#bebebe] font-neuton">
               ABOUT THE PROJECT
             </p>
-            <div className="hidden md:block max:w-[330px] text-[#bebebe] pt-6">
+            <div className="hidden md:block xl:w-[330px] text-[#bebebe] pt-6">
               <div>
                 <h4 className="text-[16px] lg:ext-[20px] font-neuton pb-2 opacity-60">
                   AWARDS
