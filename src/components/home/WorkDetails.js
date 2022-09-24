@@ -111,8 +111,8 @@ function WorkDetails() {
 
   return (
     <>
-      <div className="px-[32px] py-12">
-        <div className="grid grid-cols-[auto_450px] gap-12">
+      <div className="px-[20px] md:px-[32px] py-12">
+        <div className="grid lg:grid-cols-[auto_400px] xl:grid-cols-[auto_450px] gap-12">
           <div>
             <div className="">
               <img className="w-full " src={img} alt={name} />
@@ -121,27 +121,31 @@ function WorkDetails() {
               <motion.div whileHover={{ opacity: 0.5 }}>
                 <Link
                   to="/"
-                  className="text-[30px] font-neuton flex items-center"
+                  className="text-[20px] md:text-[30px] font-neuton flex items-center"
                 >
                   <BsArrowLeftShort className="pt-1" />
                   <span>(All Projects)</span>
                 </Link>
               </motion.div>
-              <h3 className="text-[145px] font-neue leading-none">{name}</h3>
+              <h3 className="text-[60px] sm:text-[88px] lg:text-[145px] font-neue leading-none">
+                {name}
+              </h3>
             </div>
           </div>
           <div className="text-[#bebebe] space-y-12">
             <div>
               <div>
-                <h4 className="text-[20px] font-neuton pb-2 opacity-60">
+                <h4 className="text-[16px] xl:text-[20px] font-neuton pb-2 opacity-60">
                   TECH STACK
                 </h4>
                 <hr className="opacity-20" />
               </div>
               <div>
                 <div className="flex justify-between items-center py-1">
-                  <h4 className="text-[34px] font-neuton ">React</h4>
-                  <h4 className="text-[20px] font-neuton ">
+                  <h4 className="text-[24px] xl:text-[34px] font-neuton ">
+                    React
+                  </h4>
+                  <h4 className="text-[18px] xl:text-[20px] font-neuton ">
                     Static Site Generator
                   </h4>
                 </div>
@@ -149,29 +153,45 @@ function WorkDetails() {
               </div>
               <div>
                 <div className="flex justify-between items-center py-1">
-                  <h4 className="text-[34px] font-neuton ">Tailwind</h4>
-                  <h4 className="text-[20px] font-neuton ">CSS Framework</h4>
+                  <h4 className="text-[24px] xl:text-[34px] font-neuton ">
+                    Tailwind
+                  </h4>
+                  <h4 className="text-[18px] xl:text-[20px] font-neuton ">
+                    CSS Framework
+                  </h4>
                 </div>
                 <hr className="opacity-20" />
               </div>
               <div>
                 <div className="flex justify-between items-center py-1">
-                  <h4 className="text-[34px] font-neuton ">Framer Motion</h4>
-                  <h4 className="text-[20px] font-neuton ">Animation</h4>
+                  <h4 className="text-[24px] xl:text-[34px] font-neuton ">
+                    Framer Motion
+                  </h4>
+                  <h4 className="text-[18px] xl:text-[20px] font-neuton ">
+                    Animation
+                  </h4>
                 </div>
                 <hr className="opacity-20" />
               </div>
               <div>
                 <div className="flex justify-between items-center py-1">
-                  <h4 className="text-[34px] font-neuton ">Sanity</h4>
-                  <h4 className="text-[20px] font-neuton ">Headless CMS</h4>
+                  <h4 className="text-[24px] xl:text-[34px] font-neuton ">
+                    Sanity
+                  </h4>
+                  <h4 className="text-[18px] xl:text-[20px] font-neuton ">
+                    Headless CMS
+                  </h4>
                 </div>
                 <hr className="opacity-20" />
               </div>
               <div>
                 <div className="flex justify-between items-center py-1">
-                  <h4 className="text-[34px] font-neuton ">Vercel</h4>
-                  <h4 className="text-[20px] font-neuton ">Hosting</h4>
+                  <h4 className="text-[24px] xl:text-[34px] font-neuton ">
+                    Vercel
+                  </h4>
+                  <h4 className="text-[18px] xl:text-[20px] font-neuton ">
+                    Hosting
+                  </h4>
                 </div>
                 <hr className="opacity-20" />
               </div>
@@ -179,17 +199,19 @@ function WorkDetails() {
 
             <div>
               <div>
-                <h4 className="text-[20px] font-neuton pb-2 opacity-60">
+                <h4 className="text-[16px] xl:text-[20px] font-neuton pb-2 opacity-60">
                   WITH THANKS TO
                 </h4>
                 <hr className="opacity-20" />
               </div>
               <div>
                 <div className="flex justify-between items-center py-1">
-                  <h4 className="text-[34px] font-neuton ">Designer</h4>
+                  <h4 className="text-[24px] xl:text-[34px] font-neuton ">
+                    Designer
+                  </h4>
                   <Link
                     to=""
-                    className="text-[20px] font-neuton hover:line-through decoratin-1 "
+                    className="text-[18px] xl:text-[20px] font-neuton hover:line-through decoratin-1 "
                   >
                     Isaac Powell
                   </Link>
@@ -201,29 +223,33 @@ function WorkDetails() {
         </div>
 
         {/* ABOUT THE PROJECT */}
-        <div className="flex py-12">
-          <div className="w-[490px]">
+        <div className="md:flex md:justify-between py-12">
+          <div className="xl:w-[490px] lg:w-[400px] md:w-[200px]">
             <p className="text-[20px] text-[#bebebe] font-neuton">
               ABOUT THE PROJECT
             </p>
-            <div className="w-[330px] text-[#bebebe] pt-6">
+            <div className="hidden md:block max:w-[330px] text-[#bebebe] pt-6">
               <div>
-                <h4 className="text-[20px] font-neuton pb-2 opacity-60">
+                <h4 className="text-[16px] lg:ext-[20px] font-neuton pb-2 opacity-60">
                   AWARDS
                 </h4>
                 <hr className="opacity-20" />
               </div>
               <div>
-                <div className="flex justify-between items-center">
-                  <h4 className="text-[34px] font-neue ">CSSDA</h4>
-                  <h4 className="text-[20px] font-neuton ">Site Of The Day</h4>
+                <div className="lg:flex justify-between items-center py-2">
+                  <h4 className="text-[20px] xl:text-[34px] leading-none font-neue ">
+                    CSSDA
+                  </h4>
+                  <h4 className="text-[18px] lg:text-[20px] leading-none font-neuton ">
+                    Site Of The Day
+                  </h4>
                 </div>
                 <hr className="opacity-20" />
               </div>
             </div>
           </div>
-          <div className="w-[490px] text-[#bebebe]">
-            <p className="text-[50px] font-neuton leading-none ">
+          <div className="md:w-[490px] text-[#bebebe] pt-4 md:pt-0">
+            <p className="text-[33px] md:text-[40px] lg:text-[50px] font-neuton leading-none ">
               &nbsp;&nbsp;&nbsp;&nbsp;{details}
             </p>
           </div>
