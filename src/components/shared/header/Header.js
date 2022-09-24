@@ -29,7 +29,7 @@ function Header() {
               <h2 className="md:w-[70px]">’89 —</h2>
             </div>
             <div className="hidden lg:flex lg:w-[300px] ">
-              <marquee>Creative Developer — Available May ’22 —</marquee>
+              {/* <marquee>Creative Developer — Available May ’22 —</marquee> */}
             </div>
           </div>
           <div>
