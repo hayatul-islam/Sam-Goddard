@@ -4,33 +4,42 @@ import { MainContexts } from "../../../App";
 
 function Header() {
   const { about } = useContext(MainContexts);
+  const handleEmail = () => {
+    window.open("mailto:hello@gmail.com?subject=&body=");
+  };
   return (
     <>
-      <div className="px-[32px]">
+      <div className="px-[20px] md:px-[32px]">
         <div
-          className={`grid grid-cols-2 text-[28px] pt-[10px] border-b-2 ${
+          className={`grid grid-cols-2 text-[20px] lg:text-[28px] font-neuton pt-[10px] border-b-2 ${
             about
               ? "border-[#262525] text-[#262525] opacity-60"
               : "border-[#bebebe] text-[#bebebe]"
           } `}
         >
           <div className="flex justify-between">
-            <div className="flex space-x-6">
-              <h2 className="hover:line-through ">Sam Goddard</h2>
-              <h2>’89 —</h2>
+            <div className="flex md:space-x-6">
+              <NavLink
+                to="/"
+                className="hover:line-through decoration-1 cursor-pointer md:w-[150px] "
+              >
+                <span className="hidden md:block">Sam Goddard</span>
+                <span className="md:hidden">SG</span>
+              </NavLink>
+              <h2 className="md:w-[70px]">’89 —</h2>
             </div>
-            <div className="w-[300px] overflow-hidden">
-              <marquee>Creative Developer — Available May ’22 —</marquee>
+            <div className="hidden lg:flex lg:w-[300px] ">
+              {/* <marquee>Creative Developer — Available May ’22 —</marquee> */}
             </div>
           </div>
           <div>
-            <div className="flex justify-end space-x-12">
+            <div className="flex justify-end space-x-4 md:space-x-12">
               <nav className="flex space-x-4">
                 <NavLink
                   className={({ isActive }) =>
-                    isActive
-                      ? "list-disc ml-[-30px] italic flex hover:line-through "
-                      : `${"list-none not-italic hover:line-through"}`
+                    isActive && !about
+                      ? "list-disc ml-[-30px] italic flex hover:line-through decoration-1 "
+                      : `${"list-none not-italic hover:line-through decoration-1"}`
                   }
                   to="/"
                 >
@@ -40,8 +49,8 @@ function Header() {
                 <NavLink
                   className={({ isActive }) =>
                     isActive
-                      ? "list-disc ml-[-30px] italic flex hover:line-through"
-                      : `${"list-none not-italic hover:line-through"}`
+                      ? "list-disc ml-[-30px] italic flex hover:line-through decoration-1"
+                      : `${"list-none not-italic hover:line-through decoration-1"}`
                   }
                   to="/about"
                 >
@@ -50,8 +59,15 @@ function Header() {
                 </NavLink>
               </nav>
               <div>
-                <button className="hover:line-through ">
-                  Let's Collaborate
+                <button
+                  onClick={handleEmail}
+                  className="hover:line-through decoration-1"
+                >
+                  <span className="hidden md:block">Let's Collaborate</span>{" "}
+                  <span className="hidden sm:block md:hidden  ">
+                    Collaborate
+                  </span>
+                  <span className=" sm:hidden   ">Collab</span>
                 </button>
               </div>
             </div>

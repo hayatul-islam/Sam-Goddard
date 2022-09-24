@@ -8,7 +8,7 @@ function Footer() {
     window.scrollTo(0, 0);
   };
   const handleEmail = () => {
-    window.open("mailto:hayatulislam28@gmail.com?subject=&body=");
+    window.open("mailto:hello@gmail.com?subject=&body=");
   };
   return (
     <>
