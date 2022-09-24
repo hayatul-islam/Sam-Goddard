@@ -1,6 +1,7 @@
 import React from "react";
 import AboutContent from "../components/about/AboutContent";
 import FeaturesAwards from "../components/about/FeaturesAwards";
+import AboutMe from "../components/home/AboutMe";
 
 function About() {
   return (
@@ -8,6 +9,7 @@ function About() {
       <div className="px-[32px]">
         <AboutContent />
         <FeaturesAwards />
+        <AboutMe />
       </div>
     </>
   );
