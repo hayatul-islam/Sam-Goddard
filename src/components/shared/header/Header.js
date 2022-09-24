@@ -11,7 +11,7 @@ function Header() {
     <>
       <div className="px-[20px] md:px-[32px]">
         <div
-          className={`grid grid-cols-2 text-[20px] lg:text-[28px] font-neuton pt-[10px] border-b-2 ${
+          className={`grid grid-cols-2 text-[20px] lg:text-[28px] font-neuton py-1 md:py-[10px]  border-b-2 ${
             about
               ? "border-[#262525] text-[#262525] opacity-60"
               : "border-[#bebebe] text-[#bebebe]"

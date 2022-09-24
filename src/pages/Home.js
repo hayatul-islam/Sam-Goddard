@@ -1,4 +1,5 @@
 import React from "react";
+import Collaborate from "../components/home/Collaborate";
 import Works from "../components/home/Works";
 
 function Home() {
@@ -6,7 +7,7 @@ function Home() {
     <>
       <div className="px-[20px] md:px-[32px]">
         <Works />
-        {/* <Collaborate /> */}
+        <Collaborate />
       </div>
     </>
   );
