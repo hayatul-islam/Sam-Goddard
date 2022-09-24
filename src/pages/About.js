@@ -6,7 +6,7 @@ import AboutMe from "../components/home/AboutMe";
 function About() {
   return (
     <>
-      <div className="px-[32px]">
+      <div className="px-[20px] md:px-[32px]">
         <AboutContent />
         <FeaturesAwards />
         <AboutMe />
