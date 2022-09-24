@@ -1,10 +1,11 @@
+import { motion } from "framer-motion";
 import React from "react";
 
 function AboutContent() {
   return (
     <>
       <div className="py-6">
-        <div>
+        <motion.div>
           <h2 className="text-[45px] sm:text-[60px] md:text-[75px] lg:text-[98px] font-neuton leading-none font-bold max-w-6xl">
             &nbsp;&nbsp;&nbsp;&nbsp;I’m a creative developer & co-founder of
             <a
@@ -18,7 +19,7 @@ function AboutContent() {
             . With a focus on methodical code, I enjoy making websites that are
             innovative, user-focussed, accessible & performant.
           </h2>
-        </div>
+        </motion.div>
         <div className="flex justify-end mt-[-100px] sm:mt[-160px] md:mt-[-250px] z-0">
           <img
             className="w-[90%] sm:w-[70%] md:w-[60%] lg:w-[50%] sm:h-[300px] md:h-[400px] lg:h-[500px] z-0 opacity-20 rounded"

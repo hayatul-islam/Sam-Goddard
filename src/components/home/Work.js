@@ -27,9 +27,9 @@ function Work({ work, index, setIsHover, isHover }) {
     <>
       <motion.div
         onClick={handleNavigate}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.5, type: "spring" }}
+        initial={{ opacity: 0, y: 200 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, type: "spring" }}
         whileHover={{ paddingLeft: "20px" }}
       >
         <div
