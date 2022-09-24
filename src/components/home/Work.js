@@ -40,14 +40,18 @@ function Work({ work, index, setIsHover, isHover }) {
           }`}
         >
           <div className={`flex justify-between  text-[#bebebe]   `}>
-            <div className="flex items-start leading-none py-3 space-x-4">
-              <span className="text-[46px] font-light font-neuton ">
+            <div className="flex items-start leading-none py-3 space-x-1 sm:space-x-2 md:space-x-4">
+              <span className="text-[18px] sm:text-[24px] md:text-[30px] lg:text-[46px] font-light font-neuton ">
                 ({index < 9 ? `0${Number(index) + 1}` : `${Number(index) + 1}`})
               </span>
-              <span className="text-[150px] font-neue">{name}</span>
+              <span className="text-[36px] sm:text-[42px] md:text-[87px] lg:text-[140px] font-neue">
+                {name}
+              </span>
             </div>
             <div className="flex items-end ">
-              <h3 className="text-[60px] font-light font-neuton">{year}</h3>
+              <h3 className="text-[20px] sm:text-[30px] md:text-[42px] lg:text-[60px] font-light font-neuton">
+                {year}
+              </h3>
             </div>
           </div>
 
@@ -56,8 +60,9 @@ function Work({ work, index, setIsHover, isHover }) {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1, zIndex: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
+              className="hidden md:block"
             >
-              <div className="absolute top-[-100px] right-[5%] w-[500px] h-[350px] opacity-20">
+              <div className="absolute md:top-[-50px] lg:top-[-55px] xl:top-[-100px] right-[5%] md:w-[300px] md:h-[200px] lg:w-[380px] lg:h-[270px] xl:w-[500px] xl:h-[350px] opacity-20">
                 <img className="w-full h-full" src={img} alt="" />
               </div>
             </motion.div>
