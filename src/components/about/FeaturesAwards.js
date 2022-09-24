@@ -93,22 +93,30 @@ function FeaturesAwards() {
           {data?.map((feature) => (
             <div
               key={feature?.id}
-              className="grid grid-cols-[20%_40%_20%_20%] border-b border-[#262525] items-center py-2"
+              className="flex justify-between md:grid md:grid-cols-[20%_40%_20%_20%] border-b border-[#262525] items-center py-2"
             >
-              <h4 className="text-[#262525] text-[30px] font-neue opacity-80 ">
+              <h4 className="hidden md:block text-[#262525] text-[30px] font-neue opacity-80 ">
                 {feature?.name}
               </h4>
-              <p className="text-[#262525] text-[24px] font-neuton opacity-70">
+              <p className="hidden md:block text-[#262525] text-[24px] font-neuton opacity-70">
                 {feature?.title}
               </p>
+              <div className="md:hidden">
+                <h4 className="text-[#262525] text-[24px] leading-none font-neue opacity-80 ">
+                  {feature?.name}
+                </h4>
+                <p className="text-[#262525] text-[18px] font-neuton opacity-70">
+                  {feature?.title}
+                </p>
+              </div>
               <p>
                 {feature?.items !== "" && (
-                  <p className="text-[#262525] text-[24px] font-neuton opacity-70">
+                  <p className="text-[#262525] text-[18px] md:text-[24px]  font-neuton opacity-70">
                     ({feature?.items}times)
                   </p>
                 )}
               </p>
-              <p className="text-[#262525] text-[24px] font-neuton opacity-70 text-end">
+              <p className="hidden md:block text-[#262525] text-[24px] font-neuton opacity-70 text-end">
                 {feature?.years}
               </p>
             </div>
