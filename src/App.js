@@ -19,7 +19,7 @@ function App() {
   return (
     <>
       <MainContexts.Provider value={globalContexts}>
-        <div className={`${about ? " bg-white " : "bg-[#262525]"}`}>
+        <div className={`${about ? " bg-[#bebebe] " : "bg-[#262525]"}`}>
           <TheLayout />
         </div>
       </MainContexts.Provider>

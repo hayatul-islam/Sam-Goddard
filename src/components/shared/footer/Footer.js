@@ -1,7 +1,9 @@
 import { motion } from "framer-motion";
-import React from "react";
+import React, { useContext } from "react";
+import { MainContexts } from "../../../App";
 
 function Footer() {
+  const { about } = useContext(MainContexts);
   const handleTop = () => {
     window.scrollTo(0, 0);
   };
@@ -10,8 +12,16 @@ function Footer() {
   };
   return (
     <>
-      <div className=" text-[#bebebe] opacity-70 px-[32px] ">
-        <div className=" border-t border-[#bebebe] flex justify-between py-4">
+      <div
+        className={`${
+          about ? "] text-[#262525] opacity-60" : " text-[#bebebe]"
+        } opacity-70 px-[32px] `}
+      >
+        <div
+          className={` ${
+            about ? "] border-[#262525] opacity-60" : " border-[#bebebe]"
+          } border-t flex justify-between py-4 `}
+        >
           <nav className="text-[28px] font-neuton flex space-x-6">
             <a
               className=" hover:line-through decoration-1"

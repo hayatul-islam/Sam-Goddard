@@ -1,11 +1,19 @@
-import React from "react";
+import React, { useContext } from "react";
 import { NavLink } from "react-router-dom";
+import { MainContexts } from "../../../App";
 
 function Header() {
+  const { about } = useContext(MainContexts);
   return (
     <>
       <div className="px-[32px]">
-        <div className="grid grid-cols-2 text-[28px] py-[16px] border-b-2 border-[#bebebe] text-[#bebebe] ">
+        <div
+          className={`grid grid-cols-2 text-[28px] pt-[10px] border-b-2 ${
+            about
+              ? "border-[#262525] text-[#262525] opacity-60"
+              : "border-[#bebebe] text-[#bebebe]"
+          } `}
+        >
           <div className="flex justify-between">
             <div className="flex space-x-6">
               <h2 className="hover:line-through ">Sam Goddard</h2>
