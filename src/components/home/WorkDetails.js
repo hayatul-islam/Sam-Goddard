@@ -6,7 +6,7 @@ const works = [
   {
     id: 1,
     name: "Tattooed",
-    img: "https://images.unsplash.com/photo-1578208705933-3c843e49af66?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzU2fHxzaW1wbGV8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
+    img: "https://images.unsplash.com/photo-1494122353634-c310f45a6d3c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTZ8fGRhcmt8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
     year: 2022,
     details:
       "Tattooed pickled pug iceland. Pork belly austin taiyaki hexagon occupy gatekeep jianbing tattooed sriracha, ugh pop-up. Meditation gluten-free copper mug lyft food truck mustache yes plz blog tattooed affogato tofu prism la croix fam green juice. Knausgaard pickled celiac vibecession, slow-carb listicle hashtag. ",
