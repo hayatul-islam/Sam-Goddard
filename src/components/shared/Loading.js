@@ -12,7 +12,7 @@ function Loading() {
             animate={{ opacity: 0.6, height: "200px", marginTop: 0 }}
             transition={{ duration: 3, type: "spring" }}
             className="w-full h-full  md:hidden "
-            src="https://images.unsplash.com/photo-1494587351196-bbf5f29cff42?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8ZGFya3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+            src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8b2ZmaWNlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
             alt=""
           />
           <motion.img
@@ -20,7 +20,7 @@ function Loading() {
             animate={{ opacity: 0.6, height: "200px", marginTop: 0 }}
             transition={{ duration: 3, type: "spring" }}
             className="w-full h-full hidden md:block lg:hidden"
-            src="https://images.unsplash.com/photo-1494587351196-bbf5f29cff42?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8ZGFya3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+            src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8b2ZmaWNlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
             alt=""
           />
           <motion.img
@@ -28,7 +28,7 @@ function Loading() {
             animate={{ opacity: 0.6, height: "250px", marginTop: 0 }}
             transition={{ duration: 3, type: "spring" }}
             className="w-full h-full hidden lg:block xl:hidden"
-            src="https://images.unsplash.com/photo-1494587351196-bbf5f29cff42?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8ZGFya3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+            src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8b2ZmaWNlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
             alt=""
           />
           <motion.img
@@ -36,7 +36,7 @@ function Loading() {
             animate={{ opacity: 0.6, height: "300px", marginTop: 0 }}
             transition={{ duration: 3, type: "spring" }}
             className="w-full h-full hidden xl:block"
-            src="https://images.unsplash.com/photo-1494587351196-bbf5f29cff42?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8ZGFya3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+            src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8b2ZmaWNlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
             alt=""
           />
         </div>

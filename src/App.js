@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { createContext, useEffect, useState } from "react";
 import Loading from "./components/shared/Loading";
 import TheLayout from "./pages/TheLayout";
@@ -23,19 +24,25 @@ function App() {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
-    }, 30);
+    }, 3000);
   }, []);
 
   return (
     <>
-      {!loading ? (
+      {loading ? (
         <Loading />
       ) : (
-        <MainContexts.Provider value={globalContexts}>
-          <div className={`${about ? " bg-[#bebebe] " : "bg-[#262525]"}`}>
-            <TheLayout />
-          </div>
-        </MainContexts.Provider>
+        <motion.div
+          initial={{ marginTop: "100vh", opacity: 0 }}
+          animate={{ marginTop: 0, opacity: 1 }}
+          transition={{ duration: 2, type: "spring" }}
+        >
+          <MainContexts.Provider value={globalContexts}>
+            <div className={`${about ? " bg-[#bebebe] " : "bg-[#262525]"}`}>
+              <TheLayout />
+            </div>
+          </MainContexts.Provider>
+        </motion.div>
       )}
     </>
   );
