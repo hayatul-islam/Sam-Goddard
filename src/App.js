@@ -1,4 +1,5 @@
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
+import Loading from "./components/shared/Loading";
 import TheLayout from "./pages/TheLayout";
 export const MainContexts = createContext();
 
@@ -16,13 +17,26 @@ function App() {
     about,
     setAbout,
   };
+
+  const [loading, setLoading] = useState(false);
+  useEffect(() => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 3000);
+  }, []);
+
   return (
     <>
-      <MainContexts.Provider value={globalContexts}>
-        <div className={`${about ? " bg-[#bebebe] " : "bg-[#262525]"}`}>
-          <TheLayout />
-        </div>
-      </MainContexts.Provider>
+      {loading ? (
+        <Loading />
+      ) : (
+        <MainContexts.Provider value={globalContexts}>
+          <div className={`${about ? " bg-[#bebebe] " : "bg-[#262525]"}`}>
+            <TheLayout />
+          </div>
+        </MainContexts.Provider>
+      )}
     </>
   );
 }
