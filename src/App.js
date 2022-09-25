@@ -28,7 +28,7 @@ function App() {
 
   return (
     <>
-      {loading ? (
+      {!loading ? (
         <Loading />
       ) : (
         <MainContexts.Provider value={globalContexts}>
