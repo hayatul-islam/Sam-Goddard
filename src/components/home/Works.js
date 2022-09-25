@@ -19,11 +19,21 @@ const works = [
   },
   {
     id: 3,
-    name: "Flexitarian lomo",
+    name: "V&A Portal",
     img: "https://images.unsplash.com/photo-1584988176693-876965ff28df?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjMwfHxzaW1wbGV8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
     year: 2021,
     details:
       "Flexitarian lomo deep v chillwave food truck Brooklyn heirloom, banjo sus copper mug. Lomo activated charcoal salvia health goth retro hammock coloring book drinking vinegar mustache synth ugh church-key 90's PBR&B. Sriracha vaporware stumptown marfa +1, iceland bodega boys scenester umami.",
+    stack: {
+      twig: "Templating",
+      craft: "CMS",
+      tailwind: "CMS Framework",
+      algolia: "Live Search",
+    },
+    thanksTo: {
+      client: "V&A",
+      employer: "Kind",
+    },
   },
   {
     id: 4,

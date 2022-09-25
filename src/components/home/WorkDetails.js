@@ -21,11 +21,21 @@ const works = [
   },
   {
     id: 3,
-    name: "Flexitarian lomo",
+    name: "V&A Portal",
     img: "https://images.unsplash.com/photo-1584988176693-876965ff28df?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjMwfHxzaW1wbGV8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
     year: 2021,
     details:
       "Flexitarian lomo deep v chillwave food truck Brooklyn heirloom, banjo sus copper mug. Lomo activated charcoal salvia health goth retro hammock coloring book drinking vinegar mustache synth ugh church-key 90's PBR&B. Sriracha vaporware stumptown marfa +1, iceland bodega boys scenester umami.",
+    stack: {
+      twig: "Templating",
+      craft: "CMS",
+      tailwind: "CMS Framework",
+      algolia: "Live Search",
+    },
+    thanksTo: {
+      client: "V&A",
+      employer: "Kind",
+    },
   },
   {
     id: 4,
@@ -107,7 +117,7 @@ function WorkDetails() {
   const routeQurey = route?.join(" ");
 
   const findData = works?.find((work) => work?.name === routeQurey);
-  const { name, img, details } = findData;
+  const { name, img, details, stack, thanksTo } = findData;
 
   return (
     <>
@@ -143,130 +153,197 @@ function WorkDetails() {
               </div>
             </motion.div>
           </div>
-          <div className="text-[#bebebe] space-y-12">
-            <div>
+          {!stack && (
+            <div className="text-[#bebebe] space-y-12">
               <div>
-                <h4 className="text-[16px] xl:text-[20px] font-neuton pb-2 opacity-60">
-                  TECH STACK
-                </h4>
-                <hr className="opacity-20" />
+                <div>
+                  <h4 className="text-[16px] xl:text-[20px] font-neuton pb-2 opacity-60">
+                    TECH STACK
+                  </h4>
+                  <hr className="opacity-20" />
+                </div>
+                <div>
+                  <motion.div
+                    initial={{ opacity: 0, y: 50 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 1, type: "spring" }}
+                  >
+                    <div className="flex justify-between items-center py-1">
+                      <h4 className="text-[24px] xl:text-[34px] font-neuton ">
+                        React
+                      </h4>
+                      <h4 className="text-[18px] xl:text-[20px] font-neuton ">
+                        Static Site Generator
+                      </h4>
+                    </div>
+                  </motion.div>
+                  <hr className="opacity-20" />
+                </div>
+                <div>
+                  <motion.div
+                    initial={{ opacity: 0, y: 50 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 1, type: "spring" }}
+                  >
+                    <div className="flex justify-between items-center py-1">
+                      <h4 className="text-[24px] xl:text-[34px] font-neuton ">
+                        Tailwind
+                      </h4>
+                      <h4 className="text-[18px] xl:text-[20px] font-neuton ">
+                        CSS Framework
+                      </h4>
+                    </div>
+                  </motion.div>
+                  <hr className="opacity-20" />
+                </div>
+                <div>
+                  <motion.div
+                    initial={{ opacity: 0, y: 50 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 1, type: "spring" }}
+                  >
+                    <div className="flex justify-between items-center py-1">
+                      <h4 className="text-[24px] xl:text-[34px] font-neuton ">
+                        Framer Motion
+                      </h4>
+                      <h4 className="text-[18px] xl:text-[20px] font-neuton ">
+                        Animation
+                      </h4>
+                    </div>
+                  </motion.div>
+                  <hr className="opacity-20" />
+                </div>
+                <div>
+                  <motion.div
+                    initial={{ opacity: 0, y: 50 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 1, type: "spring" }}
+                  >
+                    <div className="flex justify-between items-center py-1">
+                      <h4 className="text-[24px] xl:text-[34px] font-neuton ">
+                        Sanity
+                      </h4>
+                      <h4 className="text-[18px] xl:text-[20px] font-neuton ">
+                        Headless CMS
+                      </h4>
+                    </div>
+                  </motion.div>
+                  <hr className="opacity-20" />
+                </div>
+                <div>
+                  <motion.div
+                    initial={{ opacity: 0, y: 50 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 1, type: "spring" }}
+                  >
+                    <div className="flex justify-between items-center py-1">
+                      <h4 className="text-[24px] xl:text-[34px] font-neuton ">
+                        Vercel
+                      </h4>
+                      <h4 className="text-[18px] xl:text-[20px] font-neuton ">
+                        Hosting
+                      </h4>
+                    </div>
+                  </motion.div>
+                  <hr className="opacity-20" />
+                </div>
               </div>
               <div>
-                <motion.div
-                  initial={{ opacity: 0, y: 50 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 1, type: "spring" }}
-                >
-                  <div className="flex justify-between items-center py-1">
-                    <h4 className="text-[24px] xl:text-[34px] font-neuton ">
-                      React
-                    </h4>
-                    <h4 className="text-[18px] xl:text-[20px] font-neuton ">
-                      Static Site Generator
-                    </h4>
-                  </div>
-                </motion.div>
-                <hr className="opacity-20" />
-              </div>
-              <div>
-                <motion.div
-                  initial={{ opacity: 0, y: 50 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 1, type: "spring" }}
-                >
-                  <div className="flex justify-between items-center py-1">
-                    <h4 className="text-[24px] xl:text-[34px] font-neuton ">
-                      Tailwind
-                    </h4>
-                    <h4 className="text-[18px] xl:text-[20px] font-neuton ">
-                      CSS Framework
-                    </h4>
-                  </div>
-                </motion.div>
-                <hr className="opacity-20" />
-              </div>
-              <div>
-                <motion.div
-                  initial={{ opacity: 0, y: 50 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 1, type: "spring" }}
-                >
-                  <div className="flex justify-between items-center py-1">
-                    <h4 className="text-[24px] xl:text-[34px] font-neuton ">
-                      Framer Motion
-                    </h4>
-                    <h4 className="text-[18px] xl:text-[20px] font-neuton ">
-                      Animation
-                    </h4>
-                  </div>
-                </motion.div>
-                <hr className="opacity-20" />
-              </div>
-              <div>
-                <motion.div
-                  initial={{ opacity: 0, y: 50 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 1, type: "spring" }}
-                >
-                  <div className="flex justify-between items-center py-1">
-                    <h4 className="text-[24px] xl:text-[34px] font-neuton ">
-                      Sanity
-                    </h4>
-                    <h4 className="text-[18px] xl:text-[20px] font-neuton ">
-                      Headless CMS
-                    </h4>
-                  </div>
-                </motion.div>
-                <hr className="opacity-20" />
-              </div>
-              <div>
-                <motion.div
-                  initial={{ opacity: 0, y: 50 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 1, type: "spring" }}
-                >
-                  <div className="flex justify-between items-center py-1">
-                    <h4 className="text-[24px] xl:text-[34px] font-neuton ">
-                      Vercel
-                    </h4>
-                    <h4 className="text-[18px] xl:text-[20px] font-neuton ">
-                      Hosting
-                    </h4>
-                  </div>
-                </motion.div>
-                <hr className="opacity-20" />
+                <div>
+                  <h4 className="text-[16px] xl:text-[20px] font-neuton pb-2 opacity-60">
+                    WITH THANKS TO
+                  </h4>
+                  <hr className="opacity-20" />
+                </div>
+                <div>
+                  <motion.div
+                    initial={{ opacity: 0, y: 50 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 1, type: "spring" }}
+                  >
+                    <div className="flex justify-between items-center py-1">
+                      <h4 className="text-[24px] xl:text-[34px] font-neuton ">
+                        Designer
+                      </h4>
+                      <Link
+                        to=""
+                        className="text-[18px] xl:text-[20px] font-neuton hover:line-through decoratin-1 "
+                      >
+                        Isaac Powell
+                      </Link>
+                    </div>
+                  </motion.div>
+                  <hr className="opacity-20" />
+                </div>
               </div>
             </div>
+          )}
+          {stack && (
+            <div className="text-[#bebebe] space-y-12">
+              <div>
+                <div>
+                  <h4 className="text-[16px] xl:text-[20px] font-neuton pb-2 opacity-60">
+                    TECH STACK
+                  </h4>
+                  <hr className="opacity-20" />
+                </div>
+                <div className="text-[#bebebe] space-y-12">
+                  <div>
+                    {Object.entries(stack)?.map(([key, value], i) => (
+                      <div key={i}>
+                        <motion.div
+                          initial={{ opacity: 0, y: 50 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          transition={{ duration: 1, type: "spring" }}
+                        >
+                          <div className="flex justify-between items-center py-1">
+                            <h4 className="text-[24px] xl:text-[34px] font-neuton capitalize">
+                              {key}
+                            </h4>
 
-            <div>
-              <div>
-                <h4 className="text-[16px] xl:text-[20px] font-neuton pb-2 opacity-60">
-                  WITH THANKS TO
-                </h4>
-                <hr className="opacity-20" />
+                            <h4 className="text-[18px] xl:text-[20px] font-neuton ">
+                              {value}
+                            </h4>
+                          </div>
+                        </motion.div>
+                        <hr className="opacity-20" />
+                      </div>
+                    ))}
+                  </div>
+                </div>
               </div>
               <div>
-                <motion.div
-                  initial={{ opacity: 0, y: 50 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 1, type: "spring" }}
-                >
-                  <div className="flex justify-between items-center py-1">
-                    <h4 className="text-[24px] xl:text-[34px] font-neuton ">
-                      Designer
-                    </h4>
-                    <Link
-                      to=""
-                      className="text-[18px] xl:text-[20px] font-neuton hover:line-through decoratin-1 "
-                    >
-                      Isaac Powell
-                    </Link>
-                  </div>
-                </motion.div>
-                <hr className="opacity-20" />
+                <div>
+                  <h4 className="text-[16px] xl:text-[20px] font-neuton pb-2 opacity-60">
+                    WITH THANKS TO
+                  </h4>
+                  <hr className="opacity-20" />
+                </div>
+                <div>
+                  {Object.entries(thanksTo)?.map(([key, value], i) => (
+                    <div key={i}>
+                      <motion.div
+                        initial={{ opacity: 0, y: 50 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 1, type: "spring" }}
+                      >
+                        <div className="flex justify-between items-center py-1">
+                          <h4 className="text-[24px] xl:text-[34px] font-neuton capitalize">
+                            {key}
+                          </h4>
+
+                          <h4 className="text-[18px] xl:text-[20px] font-neuton ">
+                            {value}
+                          </h4>
+                        </div>
+                      </motion.div>
+                      <hr className="opacity-20" />
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
-          </div>
+          )}
         </div>
 
         {/* ABOUT THE PROJECT */}
