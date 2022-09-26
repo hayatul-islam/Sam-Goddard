@@ -137,7 +137,7 @@ function WorkDetails() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, type: "spring" }}
             >
-              <div className="text-[#bebebe] mt-[-110px] z-50 ">
+              <div className="text-[#bebebe] mt-[-60px] sm:mt-[-70px] md:mt-[-80px] lg:mt-[-110px] z-50 ">
                 <motion.div whileHover={{ opacity: 0.5 }}>
                   <Link
                     to="/"
