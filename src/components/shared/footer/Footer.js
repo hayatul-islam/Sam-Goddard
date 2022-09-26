@@ -4,8 +4,12 @@ import { MainContexts } from "../../../App";
 
 function Footer() {
   const { about } = useContext(MainContexts);
+
   const handleTop = () => {
-    window.scrollTo(0, 0);
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
   };
   const handleEmail = () => {
     window.open("mailto:hello@gmail.com?subject=&body=");
